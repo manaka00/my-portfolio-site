@@ -785,14 +785,28 @@ footer {
 	}
 
 	/* mv */
+	#mv {
+		background-image: linear-gradient(#fdfdfd, #f0f0f0 60%, #ffffff 61%, #cbe0f4);
+	}
 	.mv_parts {
 		display: block;
+		padding-top: 40%;
 	}
 	.mv_logo {
 		font-size: 50px;
 	}
 	.logo_title {
 		font-size: 2.5rem;
+	}
+	.mv_ice {
+		display: none;
+	}
+	.mv_parts figure {
+		width: 255px;
+		margin: 0 auto;
+	}
+	.mv_character {
+		padding-top: 10px;
 	}
 
 	/* about */
