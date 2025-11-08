@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>配信者サイト（仮） - Works | Manaka's portfolio</title>
+		
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/material/favicon.ico">
+	
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/0be7739a4e.js" crossorigin="anonymous"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<!-- JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="../js/portfolio.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="header_inner wrapper">
+				<h1 class="logo">
+					<a href="../index.html">Manaka's portfolio</a>
+				</h1>
+				<nav>
+					<ul class="hader_nav">
+						<li><a class="" href="../index.html#about">About</a></li>
+						<li><a class="" href="../index.html#skill">Skill</a></li>
+						<li><a class="" href="../index.html#work">Works</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<main>
+			<section id="work_detail">
+				<h3 class="title">Other</h3>
+				<div class="wrapper">
+					<p class="site_title">（仮）配信者チャンネル・公式サイト</p>
+					<div class="genres">
+						<p class="genre">動画</p>
+						<p class="genre">HP</p>
+					</div>
+					<img src="../images/streamer_mv.png" class="works_mv" alt="配信者サイト（仮）">
+					<div class="basic_content">
+						<p class="content_title">概要</p>
+						<p class="content_text">
+							「配信者チャンネル（動画制作）」<br>
+							ゲーム実況を中心に雑談など様々な動画を配信するYouTubeチャンネル。
+						</p>
+						<p class="content_text">
+							「配信者公式サイト（サイト制作）」<br>
+							ゲーム実況を中心に雑談など様々な動画を配信する配信者の公式サイト。
+						</p>
+						<p class="content_title">担当範囲</p>
+						<p class="content_text">動画編集 / サイト制作 / 運用 / 運営</p>
+						<p class="content_title">業務内容</p>
+						<p class="content_text">
+
+						</p>
+						<p class="content_text">
+							動画制作では、本編やショート動画の編集、サムネイルや概要欄の編集を行いました。<br>
+							サイト制作では、サイトの制作・運営を行いました。
+						</p>
+						<p class="content_text">
+							動画制作では、多くの人に興味を持ってもらえるよう、テロップや画像を効果的に用いて構成を工夫しました。<br>
+							サイト制作では、見た目の調整やページ遷移時のエラー防止など、丁寧な制作・運営を心がけました。
+						</p>
+						<p class="content_title">使用ツール</p>
+						<p class="content_text">
+							ツール：Wondershare Filmora / Audition・RX / Canva / Photoshop / WordPress / Figma
+						</p>
+					</div>
+				</div>
+				<a class="btn" href="javascript:history.back();">Back</a>
+			</section>
+			<button class="pagetop"><span class="pagetop_arrow"></span></button>
+		</main>
+		
+		<footer>
+			<p class="copyright">© 2025 Manaka's portfolio</p>
+		</footer>
+	</body>
+</html>
