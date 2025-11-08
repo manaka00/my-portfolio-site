@@ -240,18 +240,46 @@ header a {
 
 /* about */
 #about {
-	position: relative;
 	background: #CBE0F4;
 	padding-top: 50px;
+}
+#about .wrapper {
+	position: relative;
+}
+.character4 {
+	position: absolute;
+	top: 0%;
+    right: 18%;
+    width: 170px;
+	animation: poyoyon4 3s ease-in-out infinite alternate;
+	opacity: 1;
+}
+@keyframes poyoyon4 {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
 }
 .profile {
 	display: flex;
 	align-items: center;
 }
-.profile img {
+.profile figure {
 	align-self: flex-start;
-	width: 20%;
+	width: 30%;
 	height: auto;
+	margin: 0;
+}
+.profile img {
+	width: 100%;
+	height: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px #ccc;
 }
 .profile p {
 	margin-left: 2.5rem;
@@ -265,6 +293,25 @@ header a {
 #skill {
 	background: url("../images/material/snow_bg.png");
 	background-size: cover;
+}
+#skill .wrapper {
+	position: relative;
+}
+.character5 {
+	position: absolute;
+	top: 0;
+    left: 25%;
+    width: 130px;
+	animation: poyoyon5 2.5s infinite;
+	opacity: 1;
+}
+@keyframes poyoyon5 {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
 }
 .skill_list {
 	display: flex;
@@ -303,9 +350,30 @@ header a {
 
 /* work */
 #work {
-	position: relative;
-	padding: 0 0 5rem;
+	padding: 2rem 0 5rem;
 	background: #CBE0F4;
+}
+#work .wrapper {
+	position: relative;
+}
+.character3 {
+	position: absolute;
+	top: 0;
+	right: 28%;
+    width: 60px;
+	animation: poyoyon3 3s ease-in-out infinite alternate;
+	opacity: 1;
+}
+@keyframes poyoyon3 {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
 }
 .work_menu {
 	display: flex;
@@ -380,8 +448,7 @@ header a {
 
 }
 .genre {
-	margin-top: 10px;
-	margin-right: 10px;
+	margin: 10px 10px 10px 0;
 	width: 50px;
 	border-radius: 5px;
 	background: #9BC4E0;
@@ -732,7 +799,7 @@ footer {
 	.profile {
 		display: block;
 	}
-	.profile img {
+	.profile figure {
         width: 50%;
         margin: 1rem auto;
 	}
@@ -760,10 +827,25 @@ footer {
 		width: 50%;
 		margin: 2rem auto;
 	}
-	
+	.work_menu li {
+		width: 120px;
+	}
+	.work_menu li a {
+		font-size: 16px;
+	}
+	.work_menu li a:after {
+		top: 150%;
+		right: 45%;
+	}
 	/* Work Detail */
 	#work_list {
 		margin: 5rem 0;
+	}
+	.order_img {
+		display: block;
+	}
+	.site_img_dm {
+		width: 100%;
 	}
 
 	/* wave */
