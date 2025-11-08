@@ -212,20 +212,6 @@ header a {
 	font-weight: 600;
 	text-align: center;
 }
-.dog1 {
-	position: absolute;
-    top: 43%;
-	left: 10%;
-	width: 10%;
-	animation: fuwa 3s infinite ease-in-out;
-}
-.dog2 {
-	position: absolute;
-	top: 43%;
-    right: 10%;
-	width: 10%;
-	animation: fuwa 3s infinite ease-in-out;
-}
 @keyframes fuwa {
 	0% {
 		transform: translate(0, 0);
