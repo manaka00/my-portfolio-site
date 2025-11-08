@@ -1,391 +1,869 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Manaka's portfolio | TOP</title>
-		
-		<meta name="robots" content="noindex">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="./images/material/favicon.ico">
+@charset "utf-8";
+
+/* =====================================
+   GENERAL STYLING
+===================================== */
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	/*background: rgba(241, 229, 209, 0.3);*/
+	color: #333;
+	font-family: '游ゴシック',YuGothic,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+}
+
+/* =====================================
+   COMMON
+===================================== */
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+img {
+    max-width: 100%;
+	display: block;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+p {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+/* =====================================
+   COMMON2
+===================================== */
+.wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.title_area {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+.title_area p {
+	margin-bottom: 1rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+.title_area img {
+	width: 110px;
+	height: auto;
+}
+h2.title {
+	font-size: 3rem;
+}
+h3.title {
+	margin: 100px 0 80px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+h3.title::before {
+    display: block;
+	width: 11rem;
+	height: 3px;
+	margin: 1rem auto; 
+	box-sizing: inherit;
+	background: #9BC4E0;
+	content: '';
+}
+h3.title::after {
+    display: block;
+	width: 11rem;
+	height: 3px;
+	margin: 1rem auto; 
+	box-sizing: inherit;
+	background: #9BC4E0;
+	content: '';
+}
+.mt20{
+	margin-top: 20px;
+}
+.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+.custom-shape-divider-bottom-1760843409 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1760843409 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+.custom-shape-divider-bottom-1760843409 .shape-fill {
+    fill: #FFFFFF;
+}
+.custom-shape-divider-top-1760843901 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1760843901 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+.custom-shape-divider-top-1760843901 .shape-fill {
+    fill: #FFFFFF;
+}
+.note {
+	font-size: 0.8rem;
+}
+
+/* =====================================
+   Header
+===================================== */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	padding: 1.25rem 0;
+	background: #9BC4E0;
+}
+.header_inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	font-size: 20px;
+}
+.logo:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.hader_nav {
+	display: flex;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+.hader_nav li:not(:first-child) {
+	padding-left: 2rem;
+}
+.hader_nav li:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+header a {
+	color: #fff;
+}
+
+/* =====================================
+   TOP
+===================================== */
+/* mv */
+#mv {
+	/*background: url(../images/material/mb_bg.png) center center no-repeat;*/
+	background-image: linear-gradient(#fdfdfd, #f0f0f0 70%, #ffffff 71%, #cbe0f4);
+	/* background-size: cover; */
+	width: 100%;
+	height: 100vh;
+}
+#mv_inner {
+    max-width: 900px;
+    width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
+	position: relative;
+}
+.mv_parts {
+    display: flex;
+	justify-content: space-between;
+	padding-top: 30%;
+}
+.mv_parts figure {
+	margin: 0;
+	width: 410px;
+}
+.mv_character {
+    width: 100%;
+	padding-top: 100px;
+}
+.mv_character img {
+	width: 100%;
+}
+.mv_logo {
+    /* transform: translate(-50%, -50%); */
+	color: #9BC4E0;
+	font-size: 80px;
+	font-weight: 600;
+	text-align: center;
+}
+.logo_title {
+	padding-top: 20%;
+	font-size: 4rem;
+	font-weight: 600;
+	text-align: center;
+}
+@keyframes fuwa {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, -30px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+/* about */
+#about {
+	background: #CBE0F4;
+	padding-top: 80px;
+}
+#about .wrapper {
+	position: relative;
+}
+.character4 {
+	position: absolute;
+	top: 0%;
+    right: 18%;
+    width: 170px;
+	animation: poyoyon4 3s ease-in-out infinite alternate;
+	opacity: 1;
+}
+@keyframes poyoyon4 {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
+.profile {
+	display: flex;
+	align-items: center;
+}
+.profile figure {
+	align-self: flex-start;
+	width: 30%;
+	height: auto;
+	margin: 0;
+}
+.profile img {
+	width: 100%;
+	height: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px #ccc;
+}
+.profile p {
+	margin-left: 2.5rem;
+}
+.qualification {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+/* skill */
+#skill {
+	background: url("../images/material/snow_bg.png");
+	background-size: cover;
+	padding-top: 80px;
+}
+#skill .wrapper {
+	position: relative;
+}
+.character5 {
+	position: absolute;
+	top: 0;
+    left: 25%;
+    width: 130px;
+	animation: poyoyon5 2.5s infinite;
+	opacity: 1;
+}
+@keyframes poyoyon5 {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+.skill_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.skill_card {
+	display: flex;
+	width: 45%;
+	margin-bottom: 2rem;
+	padding: 20px;
+	border: 2px solid #9BC4E0;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 2px 5px #ccc;
+}
+.skill_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	text-align: center;
+}
+.skill_icon i {
+    text-align: center;
+	color: #9BC4E0;
+	font-size: 3rem;
+}
+.skill_desc {
+	margin-left: 1rem;
+}
+.skill_name {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+/* work */
+#work {
+	padding: 80px 0;
+	background: #CBE0F4;
+}
+#work .wrapper {
+	position: relative;
+}
+.character3 {
+	position: absolute;
+	top: 0;
+	right: 28%;
+    width: 60px;
+	animation: poyoyon3 3s ease-in-out infinite alternate;
+	opacity: 1;
+}
+@keyframes poyoyon3 {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
+.work_menu {
+	display: flex;
+	justify-content: center;
+}
+.work_menu li {
+	width: 200px;
+	text-align: center;
+}
+.work_menu li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	font-size: 20px;
+	font-weight: 500;
+}
+.work_menu li a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.work_menu li a:after {
+	content: '';
+	position: absolute;
+	top: 25%;
+	right: 10px;
+	display: block;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	border-top: 2px solid #9BC4E0;
+	border-right: 2px solid #9BC4E0;
+	transform: rotate(135deg);
+}
+.work_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+	margin-bottom: 5rem;
+}
+.work_item {
+	width: 30%;
+	margin-bottom: 2rem;
+	padding: 20px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 2px 5px #ccc;
+}
+.work_item a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+/*
+.work_item img {
+	border: 1px solid #9BC4E0;
+	border-radius: 20px;
+}
+*/
+.work_item2 {
+	width: 20%;
+}
+.work_item2 a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.work_item2 img {
+	border: 1px solid #987070;
+	border-radius: 20px;
+}
+.genre_area {
+	display: flex;
+
+}
+.genre {
+	margin: 10px 10px 10px 0;
+	width: 50px;
+	border-radius: 5px;
+	background: #9BC4E0;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}
+#work_detail .genre {
+	margin: 20px auto 0;
+}
+.genres {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+#work_detail .genres .genre {
+	margin: 20px 10px 0;
+}
+.btn {
+    display: block;
+	width: 250px;
+    height: 50px;
+	margin: 3rem auto 0;
+	border: 3px solid #9BC4E0;
+	border-radius: 50px;
+	background: #9BC4E0;
+	color: #fff;
+	font-weight: 600;
+	line-height: 50px;
+	text-align: center;
+}
+.btn:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+/* totop */
+
+.pagetop {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	right: 30px;
+	bottom: 65px;
+	background: #9BC4E0;
+	border: none;
+	border-radius: 10px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	cursor: pointer;
+}
+.pagetop_arrow {
+	display: block;
+	height: 10px;
+	width: 10px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transform: translateY(20%) rotate(-45deg);
+}
+.pagetop:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+/* =====================================
+   Work
+===================================== */
+#work_list {
+	margin: 5rem 0;
+}
+
+/* =====================================
+   Work Detail
+===================================== */
+#work_detail {
+	margin-bottom: 5rem;
+	background: url("../images/material/snow_bg.png");
+	background-size: cover;
+}
+#work_explanation1 {
+    padding: 3rem 0 5rem;
+    background: rgba(219, 181, 181, 0.3);
+}
+#work_explanation2 {
+    padding: 5rem 0;
+}
+.site_title {
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-align: center;
+}
+.site_title span {
+	font-size: 1rem;
+}
+.works_mv {
+	width: 600px;
+	margin: 0 auto;
+}
+.site_img {
+	display: block;
+	margin: 0 auto 2rem;
+}
+.content_title {
+	margin: 2rem 0 0.25rem;
+	font-weight: 600;
+}
+.content_text:not(:last-child) {
+	margin-bottom: 1rem;
+}
+.content_text a:hover, .content_note a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+.content_note {
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+}
+.content_note i {
+	padding-left: 0.5rem;
+	font-size: 0.8rem;
+}
+.order_img {
+	display: flex;
+	justify-content: space-around;
+	margin: 2rem 0;
+}
+.site_img_d {
+	width: 30%;
+}
+.site_img_dp {
+	width: 45%;
+}
+.site_img_dm {
+	width: 33%;
+}
+.order_img img {
+	margin-bottom: 0.5rem;
+}
+.img_capture {
+	font-size: 0.75rem;
+	text-align: center;
+}
+#work_explanation1 .btn {
+	margin-top: 5rem;
+}
+#work_explanation2 .btn {
+	margin-top: 5rem;
+}
+.link_note {
+	padding-left: 1rem;
+	color: #9BC4E0;
+}
+.appendix_area img {
+	margin-bottom: 1rem;
+	border: 3px solid #9BC4E0;
+}
+.pc_frame {
+	background: url("../images/works/frame_pc.png");
+	background-size: cover;
+}
+.scrollable_box {
+	max-height: 500px;
+	overflow-y: auto;
+	border: 3px solid #9BC4E0;
+}
+
+/* =====================================
+   Select
+===================================== */
+#select {
+	margin-top: 20%;
+	text-align: center;
+}
+.select_btn {
+	padding: 1rem;
+	background: none;
+	border: none;
+	color: #333;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.select_btn:hover {
+	opacity: 0.6;
+	transition: 0.5s;
+}
+
+/* =====================================
+   Footer
+===================================== */
+footer {
+	padding: 1rem;
+	background: #9BC4E0;
+	text-align: center;
+	color: #fff;
+}
+.copyright {
+	opacity: 0.7;
+}
+
+.sample {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+}
+
+/* =====================================
+   wave
+===================================== */
+.wave_area {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 300px;
+	background-color: #fff;
+}
+.wave_area .wave {
+	width: 200%;
+	height: 300px;
+	display: block;
+}
+.wave_area .wave.flipped {
+	transform: scaleY(-1);
+	transform-origin: center;
+}
+.wave_area .wave use {
+	fill: #CBE0F4;
+	animation: waveMove 6s linear infinite;
+}
+.wave_area .wave use:nth-of-type(2),
+.wave_area .wave use:nth-of-type(3) {
+	opacity: 0.2;
+}
+.wave_area .wave use:nth-of-type(2) {
+	animation-duration: 10s;
+}
+.wave_area .wave use:nth-of-type(3) {
+	animation-duration: 5s;
+}
+.wave_area2 {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 300px;
+	background-color: #fff;
+}
+.wave_area2 .wave {
+	width: 200%;
+	height: 100%;
+	display: block;
+}
+.wave_area2 .wave use {
+	fill: #CBE0F4;
+	animation: waveMove2 6s linear infinite;
+}
+.wave_area2 .wave use:nth-of-type(2),
+.wave_area2 .wave use:nth-of-type(3) {
+	opacity: 0.2;
+}
+.wave_area2 .wave use:nth-of-type(2) {
+	animation-duration: 10s;
+}
+.wave_area2 .wave use:nth-of-type(3) {
+	animation-duration: 5s;
+}
+@keyframes waveMove {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+@keyframes waveMove2 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+/* =====================================
+   animation
+===================================== */
+.fadein {
+  position: absolute;
+  top: 0%;
+  right: 15%;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+    transform: translate(180px,-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0);
+  }
+  20%,100% {
+    opacity: 1;
+  }
+}
+
+/* =====================================
+   Mobile
+===================================== */
+@media (max-width: 600px) {
+	.title_area {
+    	margin-bottom: 1.5rem;
+	}
 	
-		<!-- Font Awesome -->
-		<script src="https://kit.fontawesome.com/0be7739a4e.js" crossorigin="anonymous"></script>
-		
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/normalize.css">
-		<link rel="stylesheet" href="./css/style.css">
-		<!-- JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="../js/portfolio.js"></script>
-	</head>
+	header {
+		padding: 1rem 0;
+	}
+	.logo {
+		text-align: center;
+		font-size: 16px;
+	}
+	.hader_nav {
+		font-size: 0.8rem;
+	}
+	.hader_nav li:not(:first-child) {
+		padding-left: 0.8rem;
+	}
 
-	<body>
-		<header>
-			<div class="header_inner wrapper">
-				<h1 class="logo">
-					<a href="./">Manaka's Portfolio</a>
-				</h1>
-				<nav>
-					<ul class="hader_nav">
-						<li><a class="" href="#about">About</a></li>
-						<li><a class="" href="#skill">Skill</a></li>
-						<li><a class="" href="#work">Works</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		
-		<main>
-			<section id="mv">
-				<div id="mv_inner">
-					<div class="mv_parts">
-						<div>
-							<p class="mv_logo">Manaka's<br>Portfolio</p>
-							<img src="./images/material/ice3.png" alt="" class="mv_ice">
-						</div>
-						<img src="./images/material/character6.png" alt="" class="mv_character">
-					</div>
-				</div>
-			</section>
+	/* mv */
+	.mv_parts {
+		display: block;
+	}
+	.mv_logo {
+		font-size: 50px;
+	}
+	.logo_title {
+		font-size: 2.5rem;
+	}
 
-			<section id="about">
-				<div class="wrapper">
-					<div class="title_area">
-						<h2 class="title">About</h2>
-						<p>わたしについて</p>
-					</div>
-					<figure><img src="images/material/character4.png" class="character4"></figure>
-					<div class="profile wrapper box">
-						<figure><img src="./images/prof.png" alt="Kawata Manaka"></figure>
-						<div>
-							<p>
-								2021年4月に株式会社JSコーポレーションに入社。<br>
-								自社Webサイト「日本の学校」（学校情報提供サイト）および「日本の企業」（学生向け企業情報サイト）などの開発・運営に携わっています。<br>
-								また、学校法人向けのWebサイト制作・運用支援にも従事しています。<br>
-								過去には、自社のAndroid向けスマートフォンアプリ開発に携わった経験もあります。<br>
-								さらに個人では、美容医療関連企業のYouTubeチャンネルやWebサイトの運営を担当し、コンテンツ企画や更新管理なども行いました。
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="wave_area">
-				<svg class="wave flipped" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none">
-					<defs>
-						<path id="wave" d="
-							M 0 200
-							Q 150 100 300 200
-							T 600 200
-							T 900 200
-							T 1200 200
-							V 300 H 0 Z
-						"></path>
-					</defs>
-					<use xlink:href="#wave"></use>
-					<use xlink:href="#wave" x="0" y="15"></use>
-					<use xlink:href="#wave" x="0" y="30"></use>
-				</svg>
-			</div>
+	/* about */
+	.character4 {
+		top: 6%;
+		right: 10%;
+		width: 87px;
+	}
+	.profile {
+		display: block;
+	}
+	.profile figure {
+        width: 50%;
+        margin: 1rem auto;
+	}
+	.profile p {
+		margin-left: 0;
+	}
+	
+	/* skill */
+	.character5 {
+		top: 1%;
+		left: 16%;
+		width: 80px;
+	}
+	.skill_list  {
+		display: block;
+	}
+	.skill_card {
+		width: 100%;
+	}
+	
+	/* work */
+	.character3 {
+		right: 16%;
+		width: 40px;	
+	}
+	.work_list {
+		display: block;
+	}
+	.work_item {
+		width: 100%;
+		margin: 2rem auto;
+	}
+	.work_item2 {
+		width: 50%;
+		margin: 2rem auto;
+	}
+	.work_menu li {
+		width: 120px;
+	}
+	.work_menu li a {
+		font-size: 16px;
+	}
+	.work_menu li a:after {
+		top: 150%;
+		right: 45%;
+	}
+	/* Work Detail */
+	#work_list {
+		margin: 5rem 0;
+	}
+	.order_img {
+		display: block;
+	}
+	.site_img_dm {
+		width: 100%;
+	}
 
-			<section id="skill">
-				<div class="wrapper">
-					<div class="title_area">
-						<h2 class="title">Skill</h2>
-						<p>できること</p>
-					</div>
-					<figure><img src="images/material/character5.png" class="character5"></figure>
-					<h3 class="title">Program</h3>
-					<div class="skill_list box">
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-laptop-code"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">HTML</p>
-								<p class="skill_text">Webサイトの開発・制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-laptop-code"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">CSS</p>
-								<p class="skill_text">Webサイトの開発・制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-laptop-code"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">JavaScript（JQuery）</p>
-								<p class="skill_text">Webサイトの開発・制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-laptop-code"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">Java / Go</p>
-								<p class="skill_text">Webサイトの開発・制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-laptop-code"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">Ruby（Ruby on Rails）</p>
-								<p class="skill_text">Webサイトの開発・制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-mobile-screen"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">kotlin</p>
-								<p class="skill_text">自社のスマートフォンアプリケーション(Android)の開発で使用しました。</p>
-							</div>
-						</div>
-					</div>
-					<h3 class="title">Design</h3>
-					<div class="skill_list box">
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-palette"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">PhotoShop</p>
-								<p class="skill_text">Webサイトの開発・制作の際、デザインの確認や簡単な素材を作成・修正するために使用しています。<br>また、個人のWebサイトや動画制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-palette"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">illustrator</p>
-								<p class="skill_text">Webサイトの開発・制作の際、デザインの確認や簡単な素材を作成・修正するために使用しています。<br>また、個人のWebサイトや動画制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-pen-to-square"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">Figma</p>
-								<p class="skill_text">個人のWebサイト制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-pen-to-square"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">XD</p>
-								<p class="skill_text">自社のWebサイトの開発・制作の際、デザインを確認するために使用しています。</p>
-							</div>
-						</div>
-					</div>
-					<h3 class="title">Other</h3>
-					<div class="skill_list box">
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-film"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">動画編集<br>Filmora / Premiere Pro etc.</p>
-								<p class="skill_text">個人のWebサイトや動画制作で使用しています。</p>
-							</div>
-						</div>
-						<div class="skill_card">
-							<div class="skill_icon"><i class="fa-solid fa-microphone-lines"></i></div>
-							<div class="skill_desc">
-								<p class="skill_name">音声編集<br>Audition / RX etc.</p>
-								<p class="skill_text">個人のWebサイトや動画制作で使用しています。</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<div class="wave_area2">
-				<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none">
-					<defs>
-						<!-- 波を1周期分で完結させる -->
-						<path id="wave" d="
-							M 0 200
-							Q 150 100 300 200
-							T 600 200
-							T 900 200
-							T 1200 200
-							V 300 H 0 Z
-						" />
-					</defs>
-
-					<use xlink:href="#wave" />
-					<use xlink:href="#wave" x="0" y="15" />
-					<use xlink:href="#wave" x="0" y="30" />
-				</svg>
-			</div>
-			<section id="work">
-				<div class="wrapper">
-					<div class="title_area">
-						<h2 class="title">Works</h2>
-						<p>せいさくぶつ</p>
-					</div>
-					<figure><img src="images/material/character3.png" class="character3"></figure>
-					<ul class="work_menu">
-						<li><a href="#work_genre1">Our products</a></li>
-						<li><a href="#work_genre2">School</a></li>
-						<li><a href="#work_genre3">Other</a></li>
-					</ul>
-					<h3 id="work_genre1" class="title">Our products</h3>
-					<div class="work_list box">
-						<div class="work_item">
-							<a href="./works/nihonnogakko.html">
-								<img src="./images/nihonnogakko_mv.png" alt="日本の学校">
-								<p class="genre">HP</p>
-								<p class="site_name">日本の学校</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/nihonnokigyo.html">
-								<img src="./images/nihonnokigyo_mv.png" alt="日本の企業">
-								<p class="genre">HP</p>
-								<p class="site_name">日本の企業</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/nihonnojyuku.html">
-								<img src="./images/nihonnojyuku_mv.png" alt="日本の塾">
-								<p class="genre">HP</p>
-								<p class="site_name">日本の塾</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/nihonnojyukuarubaito.html">
-								<img src="./images/nihonnoarubaito_mv.png" alt="日本の塾アルバイト">
-								<p class="genre">HP</p>
-								<p class="site_name">日本の塾アルバイト</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/nihonnosensei.html">
-								<img src="./images/nihonnosensei_mv.png" alt="日本の先生">
-								<p class="genre">HP</p>
-								<p class="site_name">日本の先生</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/eigo.html">
-								<img src="./images/eigo_mv.png" alt="英語教室情報">
-								<p class="genre">HP</p>
-								<p class="site_name">英語教室情報</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/kigyo.html">
-								<img src="./images/kigyo_mv.png" alt="企業情報サイト">
-								<p class="genre">HP</p>
-								<p class="site_name">企業情報サイト</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/saiyo.html">
-								<img src="./images/saiyo_mv.png" alt="採用ページ">
-								<p class="genre">HP</p>
-								<p class="site_name">採用ページ</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/onseiannai.html">
-								<img src="./images/onseiannai_mv.png" alt="OC音声案内アプリ">
-								<p class="genre">アプリ</p>
-								<p class="site_name">OC音声案内アプリ</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/gakuseitoko.html">
-								<img src="./images/gakuseitoko_mv.png" alt="学生投稿動画">
-								<p class="genre">アプリ</p>
-								<p class="site_name">学生投稿動画</p>
-							</a>
-						</div>
-					</div>
-					<h3 id="work_genre2" class="title">School</h3>
-					<div class="work_list box">
-						<div class="work_item">
-							<a href="./works/seisa.html">
-								<img src="./images/seisa_mv.png" alt="星槎道都大学">
-								<p class="genre">HP</p>
-								<p class="site_name">星槎道都大学</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/sanwa.html">
-								<img src="./images/sanwa_mv.png" alt="北海道教育学園三和高等学校">
-								<p class="genre">HP</p>
-								<p class="site_name">北海道教育学園三和高等学校</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/ida.html">
-								<img src="./images/ida_mv.png" alt="IDA インターナショナルデザインアカデミー">
-								<p class="genre">HP</p>
-								<p class="site_name">IDA インターナショナルデザインアカデミー</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/keisen.html">
-								<img src="./images/keisen_mv.png" alt="経専北海道観光専門学校（現：札幌デジタル＆どうぶつ・医療・観光専門学校）">
-								<p class="genre">HP</p>
-								<p class="site_name">経専北海道観光専門学校</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/sola.html">
-								<img src="./images/sola_mv.png" alt="学校法人SOLA学園">
-								<p class="genre">HP</p>
-								<p class="site_name">学校法人SOLA学園</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/hanamaki.html">
-								<img src="./images/hanamaki_mv.png" alt="花巻高等看護専門学校">
-								<p class="genre">HP</p>
-								<p class="site_name">花巻高等看護専門学校</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/fuji.html">
-								<img src="./images/fuji_mv.png" alt="藤女子中学校・高等学校">
-								<p class="genre">HP</p>
-								<p class="site_name">藤女子中学校・高等学校</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/nsggakuhi.html">
-								<img src="images/nsggakuhi_mv.png" alt="NSG学費シミュレーション">
-								<p class="genre">アプリ</p>
-								<p class="site_name">NSG学費シミュレーション</p>
-							</a>
-						</div>
-					</div>
-					<h3 id="work_genre3" class="title">Other</h3>
-					<div class="work_list box">
-						<div class="work_item">
-							<a href="./works/nahls.html">
-								<img src="./images/nahls_mv.png" alt="ナールスチャンネル">
-								<div class="genre_area"><p class="genre">動画</p><p class="genre">HP</p></div>
-								<p class="site_name">ナールスチャンネル</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/streamer.html">
-								<img src="./images/streamer_mv.png" alt="（仮）配信者サイト">
-								<div class="genre_area"><p class="genre">動画</p><p class="genre">HP</p></div>
-								<p class="site_name">（仮）配信者チャンネル・公式サイト</p>
-							</a>
-						</div>
-						<div class="work_item">
-							<a href="./works/portfolio.html">
-								<img src="./images/portfolio_mv.png" alt="ポートフォリオ">
-								<p class="genre">HP</p>
-								<p class="site_name">ポートフォリオ</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<button class="pagetop"><span class="pagetop_arrow"></span></button>
-		</main>
-		
-		<footer>
-			<p class="copyright">© 2025 Manaka's portfolio</p>
-		</footer>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	</body>
-</html>
+	/* wave */
+	.wave_area, .wave_area2, .wave_area .wave {
+		height: 150px;
+	}
+}
