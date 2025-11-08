@@ -184,11 +184,11 @@ header a {
 ===================================== */
 /* mv */
 #mv {
-	/*background: url(../images/material/mb_bg.png) center center no-repeat;*/
 	background-image: linear-gradient(#fdfdfd, #f0f0f0 60%, #ffffff 61%, #cbe0f4);
-	/* background-size: cover; */
 	width: 100%;
 	height: 100vh;
+	z-index: -1;
+	margin-bottom: -1px;
 }
 #mv_inner {
     max-width: 900px;
@@ -197,19 +197,23 @@ header a {
 	margin: 0 auto;
 	padding: 0 1rem;
 	position: relative;
+	box-sizing: border-box;
 }
 .mv_parts {
     display: flex;
 	justify-content: space-between;
 	align-items: center;
     height: 100%;
+	flex-wrap: wrap;
 }
-.mv_parts figure {
+.mv_parts .ice {
 	margin: 0;
-	width: 410px;
+	width: 100%;
 }
 .mv_character {
-    width: 100%;
+	margin: 0;
+	width: 40%;
+	max-width: 410px;
 	padding-top: 100px;
 }
 .mv_character img {
@@ -218,17 +222,19 @@ header a {
 	transition: 1.5s ease-in-out;
 }
 .mv_logo {
-	color: #9BC4E0;
-	font-size: 80px;
-	font-weight: 600;
-	text-align: center;
+  color: #9BC4E0;
+  font-size: clamp(40px, 8vw, 80px); /* ✅ 自動調整されるフォントサイズ */
+  font-weight: 600;
+  text-align: center;
 }
+/*
 .logo_title {
 	padding-top: 20%;
 	font-size: 4rem;
 	font-weight: 600;
 	text-align: center;
 }
+	*/
 .mv_ice {
 	animation: fuwafuwa3 3s ease-in-out infinite;
 	transition: 1.5s ease-in-out;
@@ -628,6 +634,8 @@ footer {
 	overflow: hidden;
 	width: 100%;
 	height: 300px;
+    z-index: -1;
+    margin-top: -1px;
 	background-color: #fff;
 }
 .wave_area .wave {
@@ -658,6 +666,8 @@ footer {
 	overflow: hidden;
 	width: 100%;
 	height: 300px;
+    z-index: -1;
+    margin-bottom: -1px;
 	background-color: #fff;
 }
 .wave_area2 .wave {
@@ -764,11 +774,27 @@ footer {
   }
 }
 
+/* =====================================
+   TB
+===================================== */
+@media screen and (min-width:768px) and ( max-width:899px) {
+	.mv_parts {
+		display: block;
+		padding-top: 15%;
+	}
+	.mv_ice {
+		display: none;
+	}
+	.mv_character {
+		margin: 0 auto;
+		padding-top: 25px;
+	}
+}
 
 /* =====================================
    Mobile
 ===================================== */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 	html {
     	scroll-padding-top: 60px;
 	}
@@ -809,6 +835,7 @@ footer {
 	}
 	.mv_parts figure {
 		width: 255px;
+		max-width: 255px;
 		margin: 0 auto;
 	}
 	.mv_character {
