@@ -782,6 +782,11 @@ footer {
 	}
 
 	/* about */
+	.character4 {
+		top: 6%;
+		right: 10%;
+		width: 87px;
+	}
 	.profile {
 		display: block;
 	}
@@ -794,6 +799,11 @@ footer {
 	}
 	
 	/* skill */
+	.character5 {
+		top: 1%;
+		left: 16%;
+		width: 80px;
+	}
 	.skill_list  {
 		display: block;
 	}
@@ -802,6 +812,10 @@ footer {
 	}
 	
 	/* work */
+	.character3 {
+		right: 16%;
+		width: 40px;	
+	}
 	.work_list {
 		display: block;
 	}
