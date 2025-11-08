@@ -70,7 +70,7 @@ h2.title {
 	font-size: 3rem;
 }
 h3.title {
-	margin: 3rem 0;
+	margin: 100px 0 80px;
 	font-size: 1.5rem;
 	text-align: center;
 }
@@ -142,6 +142,11 @@ h3.title::after {
    Header
 ===================================== */
 header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 	padding: 1.25rem 0;
 	background: #9BC4E0;
 }
@@ -178,10 +183,11 @@ header a {
 ===================================== */
 /* mv */
 #mv {
-	background: url(../images/material/mb_bg.png) center center no-repeat;
-	background-size: cover;
+	/*background: url(../images/material/mb_bg.png) center center no-repeat;*/
+	background-image: linear-gradient(#fdfdfd, #f0f0f0 70%, #ffffff 71%, #cbe0f4);
+	/* background-size: cover; */
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 #mv_inner {
     max-width: 900px;
@@ -193,11 +199,18 @@ header a {
 .mv_parts {
     display: flex;
 	justify-content: space-between;
-	padding-top: 20%;
+	padding-top: 30%;
+}
+.mv_parts figure {
+	margin: 0;
+	width: 410px;
 }
 .mv_character {
-    width: 90%;
+    width: 100%;
 	padding-top: 100px;
+}
+.mv_character img {
+	width: 100%;
 }
 .mv_logo {
     /* transform: translate(-50%, -50%); */
@@ -227,7 +240,7 @@ header a {
 /* about */
 #about {
 	background: #CBE0F4;
-	padding-top: 50px;
+	padding-top: 80px;
 }
 #about .wrapper {
 	position: relative;
@@ -279,6 +292,7 @@ header a {
 #skill {
 	background: url("../images/material/snow_bg.png");
 	background-size: cover;
+	padding-top: 80px;
 }
 #skill .wrapper {
 	position: relative;
@@ -336,7 +350,7 @@ header a {
 
 /* work */
 #work {
-	padding: 2rem 0 5rem;
+	padding: 80px 0;
 	background: #CBE0F4;
 }
 #work .wrapper {
