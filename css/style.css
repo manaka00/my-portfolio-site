@@ -587,7 +587,7 @@ header a {
    Work Detail
 ===================================== */
 #work_detail {
-	margin-bottom: 5rem;
+	margin: 8rem 0;
 	background: url("../images/material/snow_bg.png");
 	background-size: cover;
 }
@@ -1004,6 +1004,9 @@ footer {
 		right: 45%;
 	}
 	/* Work Detail */
+	#work_detail {
+		margin: 5rem 0;
+	}
 	#work_list {
 		margin: 5rem 0;
 	}
