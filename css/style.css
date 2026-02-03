@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 /* =====================================
    GENERAL STYLING
@@ -12,7 +13,6 @@ html {
     scroll-padding-top: 80px;
 }
 body {
-	/*background: rgba(241, 229, 209, 0.3);*/
 	color: #333;
 	font-family: '游ゴシック',YuGothic,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
 }
@@ -45,6 +45,7 @@ p {
 	line-height: 1.6;
 }
 
+
 /* =====================================
    COMMON2
 ===================================== */
@@ -68,10 +69,10 @@ p {
 	height: auto;
 }
 h2.title {
-	font-size: 3rem;
+	font-size: 5rem;
 }
 h3.title {
-	margin: 100px 0 80px;
+	margin: 4rem 0 3rem;
 	font-size: 1.5rem;
 	text-align: center;
 }
@@ -184,9 +185,9 @@ header a {
 ===================================== */
 /* mv */
 #mv {
-	background-image: linear-gradient(#fdfdfd, #f0f0f0 60%, #ffffff 61%, #cbe0f4);
+	background-image: linear-gradient(#ffffff, #ffffff 40%, #ffffff 41%, #cbe0f4);
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	z-index: -1;
 	margin-bottom: -1px;
 }
@@ -200,50 +201,69 @@ header a {
 	box-sizing: border-box;
 }
 .mv_parts {
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
-    height: 100%;
 	flex-wrap: wrap;
 }
-.mv_parts .ice {
-	margin: 0;
-	width: 100%;
-}
 .mv_character {
-	margin: 0;
-	width: 40%;
-	max-width: 410px;
-	padding-top: 100px;
+	margin: 0 auto;
+	width: 90%;
+	padding-top: 50px;
 }
 .mv_character img {
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 	animation: fuwafuwa2 3s ease-in-out infinite;
 	transition: 1.5s ease-in-out;
 }
 .mv_logo {
-  color: #9BC4E0;
-  font-size: clamp(40px, 8vw, 80px); /* ✅ 自動調整されるフォントサイズ */
-  font-weight: 600;
-  text-align: center;
-}
-/*
-.logo_title {
-	padding-top: 20%;
-	font-size: 4rem;
+	padding-top: 15%;
+	color: #333;
+	font-size: 72px;
 	font-weight: 600;
 	text-align: center;
+	line-height: 1.2; 
+	letter-spacing: 10px;
 }
-	*/
-.mv_ice {
-	animation: fuwafuwa3 3s ease-in-out infinite;
-	transition: 1.5s ease-in-out;
+.scroll_down{
+  position:absolute;
+  bottom:5%;
+  right:5%;
+}
+.scroll_down a{
+  position: absolute;
+  left: -24px;
+  bottom: 17px;
+  color: #333;
+  font-size: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: .2em;
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.scroll_down:before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: -6px;
+    width: 2px;
+    height: 20px;
+    background: #333;
+    transform: skewX(-31deg);
+}
+.scroll_down:after{
+  content:"";
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 2px;
+  height: 80px;
+  background:#333;
 }
 
 /* about */
 #about {
 	background: #CBE0F4;
-	padding-top: 80px;
+	padding: 80px 0 100px;
 }
 #about .wrapper {
 	position: relative;
@@ -259,21 +279,96 @@ header a {
 .profile {
 	display: flex;
 	align-items: center;
+	margin-bottom: 5rem;
 }
 .profile figure {
 	align-self: flex-start;
-	width: 30%;
+	width: 35%;
 	height: auto;
 	margin: 0;
 }
 .profile img {
 	width: 100%;
 	height: auto;
-    border-radius: 20px;
+    border-radius: 50%;
     box-shadow: 0 2px 5px #ccc;
 }
 .profile p {
 	margin-left: 2.5rem;
+}
+.title_sub {
+	margin-bottom: 1rem;
+	text-align: center;
+	color: #333;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.strong {
+	display: flex;
+	justify-content: space-between;
+}
+.strong_item {
+  position: relative;
+  display: inline-block;
+}
+.strong_trigger {
+	width: 70%;
+	margin: 0 auto;
+    animation: fuwafuwa2 3s ease-in-out infinite;
+    transition: 1.5s ease-in-out;
+	cursor: pointer;
+}
+.strong_popup {
+	position: absolute;
+	top: 110%;
+	left: calc(50% + 2rem);
+	transform: translateX(-50%);
+	width: 800px;
+	padding: 30px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.25s ease;
+	z-index: 10;
+}
+.strong1 .strong_popup {
+	left: 450px ;
+}
+.strong3 .strong_popup {
+	left: calc(50% - 200px - 3rem);
+}
+.strong_item.active .strong_popup {
+	opacity: 1;
+	visibility: visible;
+}
+.strong_popup::before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 0 8px 8px 8px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}
+.strong1 .strong_popup::before {
+	left: 15%;
+}
+.strong3 .strong_popup::before {
+	left: 85% ;
+}
+.strong2 {
+	padding-top: 40px;
+}
+.strong3 {
+	padding-top: 10px;
+}
+.strong_ttl {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
 }
 .qualification {
 	margin-top: 10px;
@@ -292,8 +387,8 @@ header a {
 .character5 {
 	position: absolute;
 	top: 0;
-    left: 25%;
-    width: 130px;
+    left: 20%;
+    width: 170px;
 	animation: poyoyon 2.5s infinite;
 	opacity: 1;
 }
@@ -343,8 +438,8 @@ header a {
 .character3 {
 	position: absolute;
 	top: 0;
-	right: 28%;
-    width: 60px;
+	right: 17%;
+    width: 170px;
 	animation: fuwafuwa 3s ease-in-out infinite alternate;
 	opacity: 1;
 }
@@ -417,7 +512,6 @@ header a {
 .genre {
 	margin: 10px 10px 10px 0;
 	width: 50px;
-	border-radius: 5px;
 	background: #9BC4E0;
 	color: #fff;
 	text-align: center;
@@ -453,16 +547,16 @@ header a {
 }
 
 /* totop */
-
 .pagetop {
 	height: 50px;
 	width: 50px;
 	position: fixed;
 	right: 30px;
 	bottom: 65px;
+	padding: 15px;
 	background: #9BC4E0;
 	border: none;
-	border-radius: 10px;
+	border-radius: 50%;
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -471,8 +565,8 @@ header a {
 }
 .pagetop_arrow {
 	display: block;
-	height: 10px;
-	width: 10px;
+	height: 20px;
+	width: 20px;
 	border-top: 3px solid #fff;
 	border-right: 3px solid #fff;
 	transform: translateY(20%) rotate(-45deg);
@@ -618,14 +712,6 @@ footer {
 	opacity: 0.7;
 }
 
-.sample {
-	position: relative;
-	overflow: hidden;
-	width: 100vw;
-	height: 100vh;
-	background-color: #fff;
-}
-
 /* =====================================
    wave
 ===================================== */
@@ -754,17 +840,6 @@ footer {
     transform: translateY(0);
   }
 }
-@keyframes fuwafuwa3 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes poyoyon {
   0%, 40%, 60%, 80% {
     transform: scale(1.0);
@@ -780,13 +855,12 @@ footer {
 @media screen and (min-width:768px) and ( max-width:899px) {
 	.mv_parts {
 		display: block;
-		padding-top: 15%;
+		padding-top: 10%;
 	}
 	.mv_ice {
 		display: none;
 	}
 	.mv_character {
-		margin: 0 auto;
 		padding-top: 25px;
 	}
 }
@@ -798,8 +872,11 @@ footer {
 	html {
     	scroll-padding-top: 60px;
 	}
+	h2.title {
+		font-size: 4rem;
+	}
 	.title_area {
-    	margin-bottom: 1.5rem;
+    	margin-bottom: 2.5rem;
 	}
 	
 	header {
@@ -819,23 +896,21 @@ footer {
 	/* mv */
 	#mv {
 		background-image: linear-gradient(#fdfdfd, #f0f0f0 60%, #ffffff 61%, #cbe0f4);
+		background-image: linear-gradient(#ffffff, #ffffff 40%, #ffffff 41%, #cbe0f4);
 	}
 	.mv_parts {
 		display: block;
-		padding-top: 45%;
 	}
 	.mv_logo {
+		padding-top: 60%;
 		font-size: 50px;
+		letter-spacing: 8px;
 	}
-	.logo_title {
-		font-size: 2.5rem;
-	}
-	.mv_ice {
-		display: none;
+	.mv_character img {
+		width: 100%;
 	}
 	.mv_parts figure {
-		width: 255px;
-		max-width: 255px;
+		width: 90%;
 		margin: 0 auto;
 	}
 	.mv_character {
@@ -847,19 +922,39 @@ footer {
 		padding-top: 60px;
 	}
 	.character4 {
-		top: 6%;
-		right: 10%;
-		width: 87px;
+		top: -55px;
+		right: calc(50% - 55px);
+		width: 110px;
 	}
 	.profile {
 		display: block;
 	}
 	.profile figure {
         width: 50%;
-        margin: 1rem auto;
+        margin: 2rem auto;
 	}
 	.profile p {
 		margin-left: 0;
+	}
+	.strong_trigger {
+		width: 60%;
+	}
+	.strong {
+		display: block;
+		margin-top: 3rem;
+	}
+	.strong2 {
+		padding-top: 0;
+	}
+	.strong3 {
+		padding-top: 0;
+	}
+	.strong1 .strong_popup, .strong2 .strong_popup, .strong3 .strong_popup {
+		width: 100%;
+		left: 50%;
+	}
+	.strong1 .strong_popup::before, .strong3 .strong_popup::before {
+		left: 50%;
 	}
 	
 	/* skill */
@@ -867,9 +962,9 @@ footer {
 		padding-top: 60px;
 	}
 	.character5 {
-		top: 1%;
-		left: 16%;
-		width: 80px;
+		top: -60px;
+		left: calc(50% - 55px);
+		width: 110px;
 	}
 	.skill_list  {
 		display: block;
@@ -883,8 +978,9 @@ footer {
 		padding-top: 60px;
 	}
 	.character3 {
-		right: 16%;
-		width: 40px;	
+		top: -40px;
+		right: calc(50% - 55px);
+		width: 110px;
 	}
 	.work_list {
 		display: block;
