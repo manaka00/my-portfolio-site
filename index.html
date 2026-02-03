@@ -16,7 +16,26 @@
 		<link rel="stylesheet" href="./css/style.css">
 		<!-- JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="../js/portfolio.js"></script>
+		<script>
+			$(function () {
+				const $pageTop = $(".pagetop");
+
+				// 最初は強制的に隠す（CSS効いてない場合の保険）
+				$pageTop.hide();
+
+				$(window).on("scroll", function () {
+					if ($(this).scrollTop() > 50) {
+					$pageTop.fadeIn(200);
+					} else {
+					$pageTop.fadeOut(200);
+					}
+				});
+
+				$pageTop.on("click", function () {
+					$("html, body").animate({ scrollTop: 0 }, 300);
+				});
+			});
+		</script>
 	</head>
 
 	<body>
@@ -37,15 +56,13 @@
 		
 		<main>
 			<section id="mv">
-				<div id="mv_inner">
-					<div class="mv_parts">
-						<div>
-							<p class="mv_logo">Manaka's<br>Portfolio</p>
-							<figure class="mv_ice"><img src="./images/material/ice3.png"></figure>
-						</div>
-						<figure class="mv_character"><img src="./images/material/character6.png"></figure>
+
+					<div class="mv_parts wrapper">
+						<p class="mv_logo">Manaka's<br>Portfolio</p>
+						<figure class="mv_character"><img src="./images/material/character5_2.png"></figure>
+						<div class="scroll_down" id="type03"><a href="#">Scroll</a></div>
 					</div>
-				</div>
+
 			</section>
 
 			<section id="about">
@@ -54,18 +71,52 @@
 						<h2 class="title">About</h2>
 						<p>わたしについて</p>
 					</div>
-					<figure><img src="images/material/character4.png" class="character4"></figure>
+					<figure><img src="images/material/character4_2.png" class="character4"></figure>
 					<div class="profile wrapper box">
 						<figure><img src="./images/prof.png" alt="Kawata Manaka"></figure>
-						<div>
-							<p>
-								2021年4月に株式会社JSコーポレーションに入社。<br>
-								自社Webサイト「日本の学校」（学校情報提供サイト）および「日本の企業」（学生向け企業情報サイト）などの開発・運営に携わっています。<br>
-								また、学校法人向けのWebサイト制作・運用支援にも従事しています。<br>
-								過去には、自社のAndroid向けスマートフォンアプリ開発に携わった経験もあります。<br>
-								さらに個人では、美容医療関連企業のYouTubeチャンネルやWebサイトの運営を担当し、コンテンツ企画や更新管理なども行いました。
-							</p>
-						</div>
+						<p>
+							2021年4月に株式会社JSコーポレーションに入社。<br>
+							自社Webサイト「日本の学校」（学校情報提供サイト）および「日本の企業」（学生向け企業情報サイト）などの開発・運営に携わっています。<br>
+							また、学校法人向けのWebサイト制作・運用支援にも従事しています。<br>
+							過去には、自社のAndroid向けスマートフォンアプリ開発に携わった経験もあります。<br>
+							さらに個人では、美容医療関連企業などのYouTubeチャンネルやWebサイトの運営を担当し、コンテンツ企画や更新管理なども行いました。
+						</p>
+					</div>
+					<div class="wrapper">
+						<p class="title_sub">～strong point～</p>
+						<ul class="strong">
+							<li class="strong_item strong1">
+								<img src="images/material/strong1.png" class="strong_trigger" alt="industry knowledge">
+								<div class="strong_popup strong1">
+									<p class="strong_ttl">業界知識 × エンジニア視点</p>
+									<p>
+										社内SEとしての経験から、自社サービスや業務フローを理解し、現場の運用を踏まえた開発・制作ができる点が強みです。<br>
+										広告・教育業界の基本的な構造や業務プロセスを把握したうえで制作を行うため、「作って終わり」ではなく、実務で使われ続ける仕組みづくりを意識しています。
+									</p>
+								</div>
+							</li>
+							<li class="strong_item strong2">
+								<img src="images/material/strong2.png" class="strong_trigger" alt="user's perspective">
+								<div class="strong_popup">
+									<p class="strong_ttl">ユーザーを意識した制作</p>
+									<p>
+										デザインやマーケティングを自主的に学び、「動けばよい」ではなく「迷わず使えるか」「体験として心地よいか」を意識しながら開発・制作しています。<br>
+										ユーザーの行動や心理を意識し、導線・視認性・ストレスの少なさなど細部まで配慮した実装を得意としています。
+									</p>
+								</div>
+							</li>
+							<li class="strong_item strong3">
+								<img src="images/material/strong3.png" class="strong_trigger" alt="skill up">
+								<div class="strong_popup">
+									<p class="strong_ttl">継続的なスキルアップ</p>
+									<p>
+										プログラムだけでなく、デザイン・マーケティング領域まで継続的に学習しています。そのため技術・見た目・成果のバランスを意識した制作が可能です。<br>
+										最近はAI活用にも関心を持ち、制作効率の向上や業務改善への応用を模索しています。<br>
+										技術だけに偏らず、ユーザー体験とビジネス成果の両方を伸ばし続ける姿勢を大切にしています。
+									</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -93,7 +144,7 @@
 						<h2 class="title">Skill</h2>
 						<p>できること</p>
 					</div>
-					<figure><img src="images/material/character5.png" class="character5"></figure>
+					<figure><img src="images/material/character1_2.png" class="character5"></figure>
 					<h3 class="title">Program</h3>
 					<div class="skill_list box">
 						<div class="skill_card">
@@ -215,7 +266,7 @@
 						<h2 class="title">Works</h2>
 						<p>せいさくぶつ</p>
 					</div>
-					<figure><img src="images/material/character3.png" class="character3"></figure>
+					<figure><img src="images/material/character3_2.png" class="character3"></figure>
 					<ul class="work_menu">
 						<li><a href="#work_genre1">Our products</a></li>
 						<li><a href="#work_genre2">School</a></li>
@@ -391,6 +442,28 @@
 		<footer>
 			<p class="copyright">© 2025 Manaka's portfolio</p>
 		</footer>
-		
 	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		const items = document.querySelectorAll('.strong_item');
+
+		items.forEach(item => {
+			const trigger = item.querySelector('.strong_trigger');
+
+			trigger.addEventListener('click', function (e) {
+			e.stopPropagation();
+
+			items.forEach(i => {
+				if (i !== item) i.classList.remove('active');
+			});
+
+			item.classList.toggle('active');
+			});
+		});
+
+		document.addEventListener('click', function () {
+			items.forEach(item => item.classList.remove('active'));
+		});
+		});
+	</script>
 </html>
