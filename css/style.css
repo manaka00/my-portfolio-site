@@ -290,7 +290,7 @@ header a {
 .profile img {
 	width: 100%;
 	height: auto;
-    border-radius: 50%;
+    border-radius: 5%;
     box-shadow: 0 2px 5px #ccc;
 }
 .profile p {
@@ -317,6 +317,10 @@ header a {
     animation: fuwafuwa2 3s ease-in-out infinite;
     transition: 1.5s ease-in-out;
 	cursor: pointer;
+}
+.strong_trigger:hover {
+    opacity: 0.7;
+    transition: 0.5s;
 }
 .strong_popup {
 	position: absolute;
@@ -411,8 +415,9 @@ header a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 30%;
+	width: 25%;
 	text-align: center;
+	flex-shrink: 0;
 }
 .skill_icon i {
     text-align: center;
@@ -491,8 +496,23 @@ header a {
 	box-shadow: 0 2px 5px #ccc;
 }
 .work_item a:hover {
-	opacity: 0.7;
+	opacity: 0.6;
 	transition: 0.5s;
+}
+.work_item img {
+	border-bottom: 1px solid #E8E8E8;
+}
+.site_name {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.site_matome {
+	font-size: 14px;
+}
+.site_charge {
+	margin-top: 15px;
+	color: #9BC4E0;
+	font-size: 12px;
 }
 .work_item2 {
 	width: 20%;
@@ -677,6 +697,15 @@ header a {
 	max-height: 500px;
 	overflow-y: auto;
 	border: 3px solid #9BC4E0;
+}
+.shisetu_img_area {
+	display: flex;
+	gap: 5px;
+}
+.shisetu_img_area figure {
+	width: 50%;
+	margin: 0;
+	border: 1px solid #E8E8E8;
 }
 
 /* =====================================
