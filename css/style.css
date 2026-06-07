@@ -1045,6 +1045,15 @@ footer {
 	.site_img_dm {
 		width: 100%;
 	}
+	.shisetu_img_area {
+		display: block;
+	}
+	.shisetu_img_area figure {
+		width: 100%;
+	}
+	.shisetu_img_area figure:first-child {
+		margin-bottom: 10px;
+	}
 
 	/* wave */
 	.wave_area, .wave_area2, .wave_area .wave {
